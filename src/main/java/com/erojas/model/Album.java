@@ -52,6 +52,9 @@ public class Album implements Serializable {
 	@Column(name = "foto")
 	private String urlFoto;
 
+	@Column(name = "video")
+	private String urlVideo;
+	
 	@Column(name = "comentario")
 	private String comentario;
 
@@ -65,7 +68,7 @@ public class Album implements Serializable {
 		public Album() {
 		}
 
-		public Album(Integer id, String name, String urlFoto, String comentario, String anho) {
+		public Album(Integer id, String name, String urlFoto, String comentario, String anho,String urlVideo) {
 
 			this.id = id;
 			this.nombre = name;
@@ -73,6 +76,7 @@ public class Album implements Serializable {
 
 			this.comentario = comentario;
 			this.anho = anho;
+			this.urlVideo=urlVideo;
 		}
 
 		// Getters and setters
@@ -139,6 +143,18 @@ public class Album implements Serializable {
 		public void setCanciones(List<Cancion> canciones) {
 			this.canciones = canciones;
 		}
+		
+		
+		
+		
+		public String getUrlVideo() {
+			return urlVideo;
+		}
+
+		public void setUrlVideo(String urlVideo) {
+			this.urlVideo = urlVideo;
+		}
+
 		// Equals and Hashcode
 		@Override
 		public int hashCode() {

@@ -114,7 +114,7 @@ public class AlbumController {
 	   }
 	 
 	 // Relations methods
-	 @RequestMapping(value="/leer/{idArtista}", method=RequestMethod.GET,produces=MediaType.APPLICATION_JSON_VALUE)
+	 @RequestMapping(value="/leer/artista/{idArtista}", method=RequestMethod.GET,produces=MediaType.APPLICATION_JSON_VALUE)
 	   public ResponseEntity<List<Album>>  getAllAlbumByArtistaID(@PathVariable("idArtista") String idArtista){
 		   
 		   List<Album> lista = new ArrayList<>();;
@@ -129,7 +129,7 @@ public class AlbumController {
 			}
 			return new ResponseEntity<List<Album>>(lista, HttpStatus.OK);
 	   }
-	 @RequestMapping(value="/leer/{idGenero}", method=RequestMethod.GET,produces=MediaType.APPLICATION_JSON_VALUE)
+	 @RequestMapping(value="/leer/genero/{idGenero}", method=RequestMethod.GET,produces=MediaType.APPLICATION_JSON_VALUE)
 	   public ResponseEntity<List<Album>>  getAllAlbumByGeneroID(@PathVariable("idGenero") String idGenero){
 		   
 		   List<Album> lista = new ArrayList<>();;

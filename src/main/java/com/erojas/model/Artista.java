@@ -31,6 +31,9 @@ public class Artista implements Serializable {
 
 	@Column(name = "foto")
 	private String urlFoto;
+	
+	@Column(name = "descripcion")
+	private String descripcion;
 
 	// Relations
 	@OneToMany(mappedBy = "artista", cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
@@ -40,11 +43,12 @@ public class Artista implements Serializable {
 	public Artista() {
 	}
 
-	public Artista(Integer id, String name, String urlFoto) {
+	public Artista(Integer id, String name, String urlFoto,String descripcion) {
 
 		this.id = id;
 		this.nombre = name;
 		this.urlFoto = urlFoto;
+		this.descripcion=descripcion;
 	}
 
 	// Getters and setters
@@ -78,6 +82,14 @@ public class Artista implements Serializable {
 
 	public void setAlbums(List<Album> albums) {
 		this.albums = albums;
+	}
+
+	public String getDescripcion() {
+		return descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		this.descripcion = descripcion;
 	}
 
 	// Equals and Hashcode

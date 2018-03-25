@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.erojas.model.Artista;
-
 import com.erojas.service.ArtistaService;
+
 
 @Controller
 @RequestMapping("/artista")
